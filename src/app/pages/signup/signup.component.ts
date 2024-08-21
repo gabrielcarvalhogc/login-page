@@ -44,7 +44,7 @@ export class SignUpComponent {
   }
 
   submit() {
-    this.loginService.login(this.signUpForm.value.email, this.signUpForm.value.password).subscribe({
+    this.loginService.signup(this.signUpForm.value.name,this.signUpForm.value.email, this.signUpForm.value.password).subscribe({
       next: () => this.toastService.success("Login feito com sucesso"),
       error: () => this.toastService.error("Erro ineperado! Tente novamente mais tarde.")
     })
